@@ -1,0 +1,155 @@
+.control-shell {
+  position: relative;
+  min-height: 100vh;
+}
+
+.control-backdrop {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.control-noise {
+  position: absolute;
+  inset: 0;
+  opacity: 0.28;
+  background-image:
+    radial-gradient(circle at 18% 20%, rgba(255, 255, 255, 0.6) 0 1px, transparent 1.5px),
+    radial-gradient(circle at 76% 26%, rgba(88, 216, 255, 0.45) 0 1px, transparent 1.5px),
+    radial-gradient(circle at 62% 68%, rgba(136, 104, 255, 0.35) 0 1px, transparent 1.5px);
+  background-size: 260px 260px, 480px 480px, 620px 620px;
+}
+
+.control-mesh {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(74, 122, 201, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(74, 122, 201, 0.08) 1px, transparent 1px);
+  background-size: 78px 78px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.85), transparent 90%);
+}
+
+.control-mesh::after {
+  content: "";
+  position: absolute;
+  inset: -30% 0 auto;
+  height: 58%;
+  background: linear-gradient(180deg, transparent, rgba(88, 216, 255, 0.07), transparent);
+  animation: scanSweep 10s linear infinite;
+}
+
+.control-glow {
+  position: absolute;
+  width: 620px;
+  height: 620px;
+  border-radius: 50%;
+  filter: blur(110px);
+  opacity: 0.42;
+}
+
+.control-glow-a {
+  top: -180px;
+  left: -180px;
+  background: radial-gradient(circle, rgba(88, 216, 255, 0.28), transparent 68%);
+}
+
+.control-glow-b {
+  right: -220px;
+  top: 120px;
+  background: radial-gradient(circle, rgba(136, 104, 255, 0.24), transparent 68%);
+}
+
+.access-screen {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 28px;
+}
+
+.access-stage {
+  width: min(1260px, 100%);
+  padding: 40px;
+  border: 1px solid var(--line);
+  border-radius: 34px;
+  background:
+    linear-gradient(180deg, rgba(7, 14, 28, 0.94), rgba(5, 12, 24, 0.88)),
+    radial-gradient(circle at top, rgba(88, 216, 255, 0.08), transparent 35%);
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(28px);
+}
+
+.access-copy {
+  margin-bottom: 28px;
+  max-width: 760px;
+}
+
+.access-copy h1 {
+  margin: 8px 0 14px;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  line-height: 0.94;
+  letter-spacing: -0.05em;
+}
+
+.access-copy p {
+  max-width: 660px;
+  color: var(--muted);
+  font-size: 1.02rem;
+}
+
+.micro-tag,
+.section-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.72rem;
+  color: #b4c9ff;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.micro-tag::before,
+.section-kicker::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 4px;
+  background: linear-gradient(135deg, var(--cyan), var(--blue));
+  box-shadow: 0 0 20px rgba(88, 216, 255, 0.52);
+}
+
+.access-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.access-card {
+  padding: 26px;
+  border-radius: 28px;
+}
+
+.access-card h2 {
+  margin: 0 0 8px;
+  font-size: 1.8rem;
+}
+
+.access-card p,
+.feedback,
+.space-row,
+.telemetry-strip,
+.metric-note,
+.schedule-row small,
+.footer-indicator span,
+.footer-time span {
+  color: var(--muted);
+}
+
+.access-form {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+}

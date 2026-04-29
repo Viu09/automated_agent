@@ -1,0 +1,65 @@
+@keyframes scanSweep {
+  0% { transform: translateY(-120%); }
+  100% { transform: translateY(220%); }
+}
+
+@keyframes orbitalSpin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes orbitalSpinReverse {
+  from { transform: translate(-50%, -50%) rotate(360deg); }
+  to { transform: translate(-50%, -50%) rotate(0deg); }
+}
+
+@keyframes avatarOrbitSpin {
+  from { transform: translate(-50%, -50%) rotateX(74deg) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotateX(74deg) rotate(360deg); }
+}
+
+@keyframes avatarOrbitSpinReverse {
+  from { transform: translate(-50%, -50%) rotateX(72deg) rotate(360deg); }
+  to { transform: translate(-50%, -50%) rotateX(72deg) rotate(0deg); }
+}
+
+@keyframes pulseHalo {
+  0%, 100% { opacity: 0.7; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 1; transform: translate(-50%, -50%) scale(1.12); }
+}
+
+@keyframes haloDrift {
+  0%, 100% { transform: translateZ(0) rotate(0deg) scale(1); opacity: 0.45; }
+  50% { transform: translateZ(16px) rotate(12deg) scale(1.06); opacity: 0.8; }
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(26px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes livePulse {
+  0%, 100% {
+    box-shadow: 0 28px 74px rgba(0, 0, 0, 0.52), 0 0 18px rgba(88, 216, 255, 0.08);
+  }
+  50% {
+    box-shadow: 0 28px 74px rgba(0, 0, 0, 0.52), 0 0 38px rgba(88, 216, 255, 0.16);
+  }
+}

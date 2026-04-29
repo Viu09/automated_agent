@@ -1,0 +1,62 @@
+@media (max-width: 1520px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dashboard-layout,
+  .lower-layout,
+  .global-stage,
+  .access-grid,
+  .hero-bar {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-actions {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 1180px) {
+  .control-app {
+    grid-template-columns: 1fr;
+  }
+
+  .left-rail {
+    border-right: 0;
+    border-bottom: 1px solid rgba(111, 166, 255, 0.08);
+  }
+
+  .scenario-flow,
+  .recent-automation {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 860px) {
+  .search-bar {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .stats-ribbon,
+  .cards-grid,
+  .scenario-flow,
+  .recent-automation,
+  .assistant-grid-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .hub-card-body,
+  .focus-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .global-stage {
+    grid-template-columns: 1fr;
+  }
+
+  .badge-column.left,
+  .badge-column.right {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
